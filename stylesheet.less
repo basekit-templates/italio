@@ -36,8 +36,8 @@ body {
 }
 
 .wrapper {
-    width: 80%;
-    margin: 0 10%;
+    width: 70%;
+    margin: 0 15%;
 }
 
 a {
@@ -68,16 +68,8 @@ header.bk-header p {
     font-size: @font-swatch8-font-size;           
 }
 
-.canvas  {
-  max-width: 1200px;
-  width: 90%;
-  margin: 0 auto;
-  padding: 30px 0;
-}
-
 .widget.feature .feature-bgimg .content {
     display: block;
-    text-align: center;
 }
 
 /* ===============================
@@ -100,43 +92,30 @@ header.bk-header p {
     padding:0;
 }
 
-.widget.logo img {
-    width:100px;
-}
-
 .socialheader {
     float:none;
 }
 
 .widget.companyaddress p {
-    font-family:@font-swatch4-font-family;
-    font-weight: @font-swatch4-font-weight;
-    color:@font-swatch4-color;
-    line-height:@font-swatch4-line-height;
-    letter-spacing: @font-swatch4-letter-spacing;
-    font-size: @font-swatch4-font-size; 
+    font-family:@font-swatch5-font-family;
+    font-weight: @font-swatch5-font-weight;
+    color:@font-swatch5-color;
+    line-height:@font-swatch5-line-height;
+    letter-spacing: @font-swatch5-letter-spacing;
+    font-size: @font-swatch5-font-size; 
 }
 
 .widget.profile span {
-    font-family:@font-swatch4-font-family;
-    font-weight: @font-swatch4-font-weight;
-    color:@font-swatch4-color;
-    line-height:@font-swatch4-line-height;
-    letter-spacing: @font-swatch4-letter-spacing;
-    font-size: @font-swatch4-font-size; 
-}
-
-.widget.feature .feature-bgimg .content, .widget.feature .feature-bgimg {
-    height:0;
-    padding:100px 0px;
+    font-family:@font-swatch5-font-family;
+    font-weight: @font-swatch5-font-weight;
+    color:@font-swatch5-color;
+    line-height:@font-swatch5-line-height;
+    letter-spacing: @font-swatch5-letter-spacing;
+    font-size: @font-swatch5-font-size; 
 }
 
 hr.line {
     height:1px;
-}
-
-.bk-pt-default-menu header.bk-header .companyheader {
-    padding:50px 0px;
 }
 
 .logo, .companyname {
@@ -183,6 +162,8 @@ hr.line {
                 }
                 .spare {
                     display: block;
+                    width:40%;
+                    margin:0 15%;
                 }
             }
         }
@@ -194,19 +175,48 @@ hr.line {
 } 
 
 .widget.feature {
-	h2, h3 {
-		color: @color-swatch4;
+	h2 {
+        font-family:@font-swatch8-font-family;
+        font-weight: @font-swatch8-font-weight;
+        color:@font-swatch8-color;
+        line-height:@font-swatch8-line-height;
+        letter-spacing: @font-swatch8-letter-spacing;
+        font-size: @font-swatch8-font-size;
+        background-color:@color-swatch3;
+        display:inline-block;
+        padding:30px;
 	}
+    h3 {
+        font-family:@font-swatch9-font-family;
+        font-weight: @font-swatch9-font-weight;
+        color:@font-swatch9-color;
+        line-height:@font-swatch9-line-height;
+        letter-spacing: @font-swatch9-letter-spacing;
+        font-size: @font-swatch9-font-size;
+        background-color:@color-swatch1;
+        display:inline-block;
+        padding:30px;
+    }
+    h2 span {
+    }
+    h3 span {
+    }
 	.spare {
 		width: 30%;
 	    display: inline-block;
-	    background-color: fadeout(@color-swatch1, 20%);
 	    padding: 100px 10px;
 	    margin: 0px auto;
 /* 	    padding-left: (16px + @font-swatch10-letter-spacing); */
 	}
 }
 
+.feature-btn {
+    display:block;
+}
+
+.widget.feature .feature-bgimg .content button {
+    margin:0;
+}
 
 /* ===============================
    4. MENU SECTIONS NAVIGATION
@@ -297,12 +307,12 @@ hr.line {
 
             a {
                 display: block;
-                font-family:@font-swatch6-font-family;
-                font-size:@font-swatch6-font-size;
-                font-weight: @font-swatch6-font-weight;
-                color: @font-swatch6-color;
-                line-height:@font-swatch6-line-height;
-                letter-spacing: @font-swatch6-letter-spacing;
+                font-family:@font-swatch5-font-family;
+                font-size:@font-swatch5-font-size;
+                font-weight: @font-swatch5-font-weight;
+                color: @font-swatch5-color;
+                line-height:@font-swatch5-line-height;
+                letter-spacing: @font-swatch5-letter-spacing;
                 &:hover {
                     text-decoration: underline;
                 }
@@ -364,7 +374,7 @@ hr.line {
         position: relative;
         max-width: 100%;
         min-height: 50px;
-        background-color:@color-swatch2;
+        padding:10px 0px;
         @media @tablet {
             background-color: transparent;
         }
@@ -374,9 +384,7 @@ hr.line {
             }
         }
         ul {
-            display: table;
-            float: none;
-            margin: 0 auto;
+            float: right;
             text-align: center;
             padding: 0;
             @media @tablet {
@@ -406,7 +414,7 @@ hr.line {
                     ul {
                         display: block !important;
                         position: absolute;
-                        background-color: darken(@color-swatch1,10%);
+                        background-color: @color-swatch3;
                         z-index: 500;
                         padding: 0;
                         margin: 3px 0 0 0;
@@ -537,6 +545,11 @@ hr.line {
     }
 }
 
+.widget .extendednavigation ul li a:hover {
+    color:@font-swatch6-color;
+    text-decoration: underline;
+}
+
 .widget .extendednavigation ul li.folder .text {
     color:@font-swatch6-color;
 }
@@ -566,11 +579,6 @@ hr.line {
     }
 }
 
-.bk-pt-default .widget.extendednavigation ul li a:hover {
-    color:@font-swatch6-color;
-    text-decoration: underline;
-}
-
 .widget.extendednavigation ul li.folder .text:hover {
   text-decoration: underline;
 }
@@ -587,110 +595,157 @@ hr.line {
     display: inline-block;
     position: absolute;
     right: 0;
+    left:auto;
     border-radius:0;
     box-shadow:none;
     margin-top:20px; 
 }
 
-.bk-pt-default .widget .extendednavigation a.pull:after {
-   content: "";
-   background: image('/images/nav-icon-black.png') no-repeat; 
-   width: 18px;
-   height: 20px;
-   display: inline-block;
-   position: absolute;
-   right: 0;
-   border-radius:0;
-   box-shadow:none;
-   margin-top:20px; 
-}
-
-.bk-pt-default-menu .widget .extendednavigation ul li a {
-    color:@font-swatch6-color;
-}
-
-.bk-pt-default-menu .widget .extendednavigation ul li.folder .text {
-    color:@font-swatch6-color;
-}
-
-.bk-pt-default-menu .widget .extendednavigation ul li.folder .text:after {
-    color:@font-swatch6-color;
-}
 
 /* ===============================
-   5. HEADER
+   HEADER
    =============================== */
 
-header.bk-header {
-    padding:0;
-    background-repeat: no-repeat;
-    background-position:bottom;
-    background-size:contain;
-    position:absolute;
-    top:0;
-    width:100%;
- .companyheader {
-        width:100%;
-        float:none;
-        padding:90px 0px;
-        .logo, .companyname {
-            text-align: center;
-            float:none;
-        }
+header {
+    padding: 20px 0;
+    background-color: @color-swatch2;
+}
 
-        .companyname a {
-            display: block;
-            font-family: @font-swatch10-font-family;
-            font-weight: @font-swatch10-font-weight;
-            color: @font-swatch10-color;
-            line-height: @font-swatch10-line-height;
-            letter-spacing: @font-swatch10-letter-spacing;
-            font-size: @font-swatch10-font-size;
-                &:hover {
-                    text-decoration: none;
-                }
-        } 
+.companyheader {
+    display: block;
+    float: left;
+    padding: 0;
+    margin: 6px 0 0;
+}
 
-    }/* end companyheader */
+/* COMPANY NAME */
 
-    .widget.content {
-        text-align: center;
-        width: 100%;
-        margin: 0 auto;
-        margin-top:10px;
-        @media @mobile {
-            width: 100%;
-        }
-    }
+.widget.companyname {
+    display: block;
+    float: left;
+}
 
-    .clicktocall {
-        text-align: center;
-        margin-top: 20px;
-        background-color:@color-swatch3;
-        @media @mobile {
-            margin-bottom: 60px;
-        }
-            a {
-                border: 2px solid @color-swatch3;
-                padding: 10px 13px;
-                font-family: @font-swatch5-font-family;
-                font-size: @font-swatch5-font-size;
-                color: @font-swatch5-color;
-                background-color:@color-swatch3;
-                    &:hover {
-                        color: @color-swatch3;
-                        text-decoration: none;
-                    }
-            }
-    } /* end clicktocall */
+.widget.companyname a {
+    font-family: @font-swatch10-font-family;
+    font-weight: @font-swatch10-font-weight;
+    color: @font-swatch10-color;
+    line-height: @font-swatch10-line-height;
+    letter-spacing: @font-swatch10-letter-spacing;
+    font-size: @font-swatch10-font-size;
+    
+}
 
-}   /* end header */
+.widget.companyname a:hover {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* LOGO */
+
+.widget.logo {
+    display: block;
+    float: left;
+    margin-right: 10px;
+}
 
 .box {
     width: 45%;
     background-color: rgba(255, 255, 255, 0.9);
     margin: 0px auto;
     padding: 110px 0px;
+}
+
+
+.headerprofile {
+    background-color:@color-swatch1;
+    padding:0;
+    background-repeat: no-repeat;
+    background-position:bottom;
+    background-size:contain;
+    padding: 20px 0px 10px 0px;
+            .header-left {
+                float:left;
+                width:33%;
+                .widget.profile span {
+                    float:left;
+                }
+                    .widget.content { 
+                    @media @tablet {
+                    margin:0px auto;
+                    display:table;
+                    text-align:center;
+                        }
+                    }
+                @media @tablet {
+                    width:100%;
+                    margin-top:20px;
+                }
+            }
+
+            .header-right {
+                float:right;
+                width:33%;
+                .widget.profile span {
+                }
+                .widget.profile {
+                    float:right;
+                    @media @tablet {
+                    margin:0px auto;
+                    display:table;
+                    }
+                }
+                @media @tablet {
+                    width:100%;
+                    margin-top:0;
+                    margin-bottom:20px;
+                    margin:0px auto;
+                    display:table;
+                }
+            }
+
+            .header-center {
+                float:left;
+                width:33%;
+                .widget.profile span {
+                }
+                .widget.profile {
+                    float:right;
+                    @media @tablet {
+                    margin:0px auto;
+                    display:table;
+                    }
+                }
+                @media @tablet {
+                    width:100%;
+                    margin-top:0;
+                    margin-bottom:20px;
+                    margin:0px auto;
+                    display:table;
+                }
+            }
+
+        }
+
+.menu-header h2:before, .widget.menu .main .menu-subsection-header h2:before {
+    content: "★";
+    display: inline-block;
+    height: 0.6em;
+    position: relative;
+    vertical-align: middle;
+    margin-bottom: 1.7em;
+    font-size:22px;
+    margin-right:15px;
+}
+
+.widget.menu .main .menu-subsection-header h2:after {
+    content: "★";
+    display: inline-block;
+    height: 0.6em;
+    position: relative;
+    vertical-align: middle;
+    margin-bottom: 1.7em;
+    font-size:22px;
+    margin-left:15px;
 }
 
 /* ===============================
@@ -752,7 +807,6 @@ header.bk-header {
                         text-align: center;
                         overflow: hidden; 
                     &:before, &:after {
-                        content: "";
                         @media only screen and (max-width: 480px) {
                             content: none;
                             display: block;
@@ -793,7 +847,7 @@ header.bk-header {
                     &.menu-item-promoted { /* menu-item-promoted */
                         padding: 1.2em;
                         margin: 11px 1px 20px;
-                        background-color:@color-swatch7;
+                        background-color: fadeout(@color-swatch4, 95%);
                         .inner-item {
                             width:100%;
                             border: 0;
@@ -919,7 +973,7 @@ header.bk-header {
                 padding: 2em 2em 0;
                 margin-bottom: 2em;
                 position: relative;
-                background-color:@color-swatch7;
+                background-color: fadeout(@color-swatch4, 95%);
                 &:before {
                    content: " ";
                    position: absolute;
@@ -984,6 +1038,30 @@ header.bk-header {
     }/* end main */
 
 } /* end .widget.menu */
+
+.widget.menu .main .menu-header h1:before, .widget.menu .main .menu-subsection-header h1:before {
+    content: "";
+    background-image: url(templates/italio/images/leaf-left.png); 
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 41px;
+    width: 46px;
+    margin: 0 20px;
+    position: relative;
+    top: 9px;
+}
+
+.widget.menu .main .menu-header h1:after, .widget.menu .main .menu-subsection-header h1:after {
+    content: "";
+    background-image: url(templates/italio/images/leaf-right.png); 
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 41px;
+    width: 46px;
+    margin: 0 20px 0px 14px;
+    position: relative;
+    top: 9px;
+}
 
 /* ===============================
    7. FOOTER
@@ -1060,7 +1138,7 @@ footer.bk-footer {
             margin-right: 0px;
             background-size: 22px;
             background-repeat: no-repeat;
-            background-color: transparent;
+            background-color: @color-swatch2;
             border-radius:20px;
             &:hover {
               background-color: darken(@color-swatch3,5%);
@@ -1496,10 +1574,10 @@ button.btn:hover {
 }
 
 .widget.feature button {
-    background:@color-swatch3;
+    background:@color-swatch2;
     height:45px;
     &:hover {
-       background: darken(@color-swatch3, 5%);
+       background:lighten(@color-swatch2,20%);
     }
 }
 
@@ -1631,10 +1709,6 @@ blockquote:before {
     font-size:@font-swatch1-font-size;
 }
 
-    .widget.feature .spare {
-        width:40%;
-        }
-
 /* ===============================
    9. IPAD WIDTH
    =============================== */
@@ -1716,14 +1790,75 @@ blockquote:before {
     .navbar {
         display:none;
     }
-    .widget .extendednavigation {
-        background-color: @color-swatch2;
-    }
     .canvas {
         padding:30px 0px;
     }
     .widget.feature .spare {
         width:60%;
+    }
+
+    .headerprofile .header-left .widget.profile{
+        margin:0px auto;
+        display:table;
+        text-align:center;
+    }
+
+    .headerprofile .header-right .widget.profile{
+        margin:0px auto;
+        display:table;
+        float:none;
+        text-align:center;
+    }
+
+    .headerprofile .header-center .widget.profile{
+        margin:0px auto;
+        display:table;
+        float:none;
+        text-align:center;
+    }
+
+    .headerprofile {
+        padding: 0 0 20px 0;
+    }
+
+    .widget.feature .feature-bgimg .content .spare {
+        width:70%;
+    }
+    .widget.feature h2, .widget.feature h3 {
+        text-align:center;
+        display:block;
+    }
+    .widget.feature .feature-bgimg .content button.btn {
+        margin:0px auto;
+        display:table;
+    }
+
+    .widget.feature .feature-bgimg .content {
+        padding:0;
+    }
+
+    .companyheader {
+        padding: 0;
+        margin: 0px auto;
+        display: table;
+        float:none;
+    }
+
+    .widget .extendednavigation a.pull:after {
+        content: "";
+        background: url(templates/italio/images/nav-icon.png) no-repeat;
+        width: 18px;
+        height: 20px;
+        display: inline-block;
+        position: absolute;
+        right: 0;
+        left: 0;
+        border-radius: 0;
+        box-shadow: none;
+        margin-top: 20px;
+    }
+    header {
+        padding:40px 0 20px 0;
     }
 }
 
@@ -1747,13 +1882,9 @@ blockquote:before {
         top:20px;
     }
 
-    .widget.companyname {
-        margin: 0px auto;
-    }
-
     .companyheader .companyname a {
-          font-size: bkscale(@font-swatch10-font-size,0.5);
-          line-height:bkscale(@font-swatch10-line-height,0.5);
+          font-size: bkscale(@font-swatch10-font-size,0.9);
+          line-height:bkscale(@font-swatch10-line-height,0.9);
           padding-bottom:0px;  
     }
 
@@ -1822,10 +1953,6 @@ blockquote:before {
 
     .widget.feature .feature-bgimg {
         height:0;
-    }
-
-    .widget.feature .feature-bgimg .content {
-        padding: 80px 0px;
     }
 
     .widget.profile .bk-profile-socialicons {

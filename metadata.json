@@ -1,5 +1,5 @@
 {
-    "name":"Salas",
+    "name":"Italio",
     "thumbnail":"salas.png",
     "screenshot":"salas.png",
     "tags": {
@@ -11,8 +11,8 @@
     {
         "Swatch 1": {
             "color1":"#ffffff",
-            "color2":"#e2b8a3",
-            "color3":"#cb6e66",
+            "color2":"#000000",
+            "color3":"#b30002",
             "color4":"#233853",
             "color5":"#000000",
             "color6":"#db1515",
@@ -60,31 +60,31 @@
         "font1": {
             "font-family": "\"Lato\", Geneva, Tahoma, sans-serif",
             "font-size": "40px",
-            "font-weight": "300",
+            "font-weight": "400",
             "line-height": "50px",
-            "color": "@color-swatch4",
+            "color": "@color-swatch2",
             "letter-spacing": "10px"
         },
         "font2": {
             "font-family": "\"Lato\", Geneva, Tahoma, sans-serif",
             "font-size": "32px",
-            "font-weight": "300",
+            "font-weight": "400",
             "line-height": "38px",
-            "color": "@color-swatch4",
+            "color": "@color-swatch2",
             "letter-spacing": "10px"
         },
         "font3": {
             "font-family": "\"Lato\", Geneva, Tahoma, sans-serif",
             "font-size": "20px",
-            "font-weight": "300",
+            "font-weight": "400",
             "line-height": "26px",
-            "color": "@color-swatch5",
+            "color": "@color-swatch2",
             "letter-spacing": "inherit"
         },
         "font4": {
             "font-family": "\"Lato\", Geneva, Tahoma, sans-serif",
             "font-size": "18px",
-            "font-weight": "300",
+            "font-weight": "400",
             "line-height": "24px",
             "color": "@color-swatch5",
             "letter-spacing": "inherit"
@@ -100,9 +100,9 @@
         "font6": {
             "font-family": "\"Lato\", Geneva, Tahoma, sans-serif",
             "font-size": "16px",
-            "font-weight": "300",
+            "font-weight": "400",
             "line-height": "36px",
-            "color": "@color-swatch4",
+            "color": "@color-swatch1",
             "color-hover": "@color-swatch4",
             "letter-spacing": "inherit",
             "background-color": "transparent",
@@ -120,26 +120,26 @@
         },
         "font8": {
             "font-family": "\"Lato\", Geneva, Tahoma, sans-serif",
-            "font-size": "32px",
+            "font-size": "60px",
             "font-weight": "300",
-            "line-height": "36px",
-            "color": "@color-swatch5",
+            "line-height": "66px",
+            "color": "@color-swatch1",
             "letter-spacing": "inherit"
         },
         "font9": {
             "font-family": "\"Lato\", Geneva, Tahoma, sans-serif",
             "font-size": "24px",
             "font-weight": "300",
-            "line-height": "32px",
-            "color": "@color-swatch1",
+            "line-height": "28px",
+            "color": "@color-swatch2",
             "letter-spacing": "inherit"
         },
         "font10": {
             "font-family": "\"Lato\", Geneva, Tahoma, sans-serif",
-            "font-size": "66px",
-            "font-weight": "300",
-            "line-height": "105px",
-            "color": "@color-swatch4",
+            "font-size": "36px",
+            "font-weight": "400",
+            "line-height": "42px",
+            "color": "@color-swatch1",
             "letter-spacing": "15px"
         }
     }
