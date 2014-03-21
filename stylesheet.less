@@ -842,8 +842,9 @@ header {
             .menu-items { /* ol */
                 width:100%;
                 li {    /* menu-item */
-                    display:block;
+                    display:inline-block;
                     position: relative;
+                    width:100%;
                     &.menu-item-promoted { /* menu-item-promoted */
                         padding: 1.2em;
                         margin: 11px 1px 20px;
@@ -1041,7 +1042,7 @@ header {
 
 .widget.menu .main .menu-header h1:before, .widget.menu .main .menu-subsection-header h1:before {
     content: "";
-    background-image: url(templates/italio/images/leaf-left.png); 
+    background: image('/images/leaf-left.png');
     background-repeat: no-repeat;
     display: inline-block;
     height: 41px;
@@ -1053,7 +1054,7 @@ header {
 
 .widget.menu .main .menu-header h1:after, .widget.menu .main .menu-subsection-header h1:after {
     content: "";
-    background-image: url(templates/italio/images/leaf-right.png); 
+    background: image('/images/leaf-right.png');
     background-repeat: no-repeat;
     display: inline-block;
     height: 41px;
@@ -1779,10 +1780,6 @@ blockquote:before {
         min-height:50px;
     }
 
-    .blogsearch form button {
-        width:100%;
-    }
-
     .bk-pt-default-menu header.bk-header .companyheader {
         padding:130px 0px;
     }
@@ -1846,7 +1843,7 @@ blockquote:before {
 
     .widget .extendednavigation a.pull:after {
         content: "";
-        background: url(templates/italio/images/nav-icon.png) no-repeat;
+        background: image('/images/nav-icon.png') no-repeat; 
         width: 18px;
         height: 20px;
         display: inline-block;
@@ -1857,8 +1854,14 @@ blockquote:before {
         box-shadow: none;
         margin-top: 20px;
     }
+
     header {
         padding:40px 0 20px 0;
+    }
+
+    .wrapper {
+        width: 90%;
+        margin: 0 5%;
     }
 }
 
@@ -1898,13 +1901,23 @@ blockquote:before {
     }
 
     h1 {
-          font-size: bkscale(@font-swatch1-font-size,0.8);
-          line-height:bkscale(@font-swatch1-line-height,0.8);
+          font-size: bkscale(@font-swatch1-font-size,0.7);
+          line-height:bkscale(@font-swatch1-line-height,0.7);
+          letter-spacing:bkscale(@font-swatch1-letter-spacing,0.2);
     }
 
     h2 {
           font-size: bkscale(@font-swatch2-font-size,0.6);
           line-height:bkscale(@font-swatch2-line-height,0.6);
+          letter-spacing:bkscale(@font-swatch2-letter-spacing,0.5);
+    }
+    .widget.feature h2 {
+          font-size: bkscale(@font-swatch8-font-size,0.5);
+          line-height:bkscale(@font-swatch8-line-height,0.5);
+    }
+    .widget.feature h3 {
+          font-size: bkscale(@font-swatch9-font-size,0.6);
+          line-height:bkscale(@font-swatch9-line-height,0.6);
     }
     .bk-content-text h2 {
         font-size: bkscale(@font-swatch3-font-size,1.2);
@@ -1978,6 +1991,9 @@ blockquote:before {
     }
     .widget.feature .spare {
         width:70%;
+    }
+    .widget.logo img {
+        width: 80%;
     }
 
 }
