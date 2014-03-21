@@ -231,8 +231,6 @@ hr.line {
     text-align: center;
     padding: 0;
     margin: 0;
-    min-height: 50px;
-    background-color: fadeout(@color-swatch4, 95%);
     @media @tablet {
         background-color:transparent;
     }
@@ -287,7 +285,7 @@ hr.line {
         li {
             float: left;
             display: block;
-            padding: 5px 20px;
+            padding: 5px 10px;
             margin: 0;
             @media @tablet {
                 width: 100%;
@@ -316,9 +314,22 @@ hr.line {
                 &:hover {
                     text-decoration: underline;
                 }
-                &:after {
-                    color: @color-swatch6;
-                }
+                        &:before {
+                            @media @tablet {
+                                content:"\00d7";
+                                color: @color-swatch3;
+                                padding-right: 1.5em;
+                                position: relative;
+                                font-size: 13px;
+                            }
+                        }
+                        &:after {
+                            content:"\00d7";
+                            color: @color-swatch3;
+                            padding-left: 1.5em;
+                            position: relative;
+                            font-size: 13px;
+                        }
             }
             &:last-child a:after {
                 content: "";
