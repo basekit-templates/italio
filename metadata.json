@@ -1,7 +1,7 @@
 {
     "name":"Italio",
-    "thumbnail":"salas.png",
-    "screenshot":"salas.png",
+    "thumbnail":"itailio.png",
+    "screenshot":"italio.png",
     "tags": {
     "en": ["minimal", "clean", "photography", "vintage", "modern", "dark", "studio", "website", "creative", "elegant", "professional", "unique", "media", "sans-serif"],
     "es": ["minimalista", "limpio", "fotografico", "vintage", "moderno", "oscuro", "estudio", "website", "creativo", "elegante", "profesional", "unico", "comunicacion", "sans-serif"],
@@ -20,16 +20,16 @@
         },
         "Swatch 2": {
             "color1":"#ffffff",
-            "color2":"#F0E68C",
-            "color3":"#841c2f",
-            "color4":"#841c2f",
+            "color2":"#841C2f",
+            "color3":"#841C2f",
+            "color4":"#F0E68C",
             "color5":"#3c4a55",
             "color6":"#841c2f",
             "color7":"#F0E68C"
         },
         "Swatch 3": {
             "color1":"#ffffff",
-            "color2":"#00FFFF",
+            "color2":"#4F7391",
             "color3":"#4F7391",
             "color4":"#4F7391",
             "color5":"#3c4a55",
@@ -38,7 +38,7 @@
         },
         "Swatch 4": {
             "color1":"#ffffff",
-            "color2":"#FFFAF0",
+            "color2":"#73ad5c",
             "color3":"#73AD5C",
             "color4":"#73AD5C",
             "color5":"#3c4a55",
@@ -47,7 +47,7 @@
         },
         "Swatch 5": {
             "color1":"#ffffff",
-            "color2":"#7FFFD4",
+            "color2":"#4BA5A1",
             "color3":"#4BA5A1",
             "color4":"#666088",
             "color5":"#3c4a55",
