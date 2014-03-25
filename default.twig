@@ -3,20 +3,31 @@
 
 {% block content %}
 
-    {{widget('feature', 'featurehome', {"header": "profile", "strapline":"profile", "buttonText":"Lorem Ipsum","defaultBgImg": asset('images/feature-bg.jpg'), 'positionTopPercentage': '50','showBtn': true})|raw}}
-
-      <div class="menu-container">
-            {{widget('extendednavigation', 'navigationheader', {})|raw}}
+<header>
+    <div class="wrapper clearfix">
+      <div class="companyheader clearfix">
+          {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+          {{widget('companyname', 'companyname', {"business": "ITALIO"})|raw}}
       </div>
+        {{widget('extendednavigation', 'navigationheader', {})|raw}}
+    </div>
+</header>
+        <div class="headerprofile wrapper clearfix">
+            <div class="header-left">
+                {{widget('profile', 'headercolumn1profilePhone', { 'profileType':'phone', 'phone':'profile'})|raw}} 
+            </div>
+            <div class="header-center">
+                {{widget('profile', 'headercolumn1profileAddress', { 'profileType':'address', 'address':'profile'})|raw}} 
+            </div>
+            <div class="header-right">
+                {{widget('profile', 'headercolumn1socialicons', { 'profileType':'socialicons', 'socialicons':'profile'})|raw}}
+            </div>
+        </div> 
 
-      <div class="canvas">
-          <div class="wrapper clearfix">
+      <div class="wrapper clearfix">
               {{zone('main')|raw}}
           </div>
-      </div>
       <footer class="bk-footer">
-        {{widget('companyaddress', 'companyaddress', {})|raw}}
-        {{widget('profile', 'footercolumn1profilePhone', { 'profileType':'phone', 'phone':'profile'})|raw}} 
-        </footer>
+      </footer>
 
 {% endblock %}
