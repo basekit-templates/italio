@@ -127,16 +127,6 @@ hr.line {
     display:table;
 }
 
-// Feature Widget
-/*
-.widget {
-    &.feature {
-        .feature-bgimg {
-            background-image: image('/images/feature-bg.jpg');
-        }
-    }
-}
-*/
 .widget {
     &.feature {
         display: table;
@@ -186,9 +176,7 @@ hr.line {
         line-height:@font-swatch8-line-height;
         letter-spacing: @font-swatch8-letter-spacing;
         font-size: @font-swatch8-font-size;
-        background-color:@color-swatch3;
-        display:inline-block;
-        padding:30px;
+        padding-bottom: 0;
 	}
     h3 {
         font-family:@font-swatch9-font-family;
@@ -197,13 +185,17 @@ hr.line {
         line-height:@font-swatch9-line-height;
         letter-spacing: @font-swatch9-letter-spacing;
         font-size: @font-swatch9-font-size;
-        background-color:@color-swatch1;
-        display:inline-block;
-        padding:30px;
+        padding-bottom: 0;
     }
     h2 span {
+        background-color:@color-swatch3;
+        display: table;
+        padding: 20px;
     }
     h3 span {
+        background-color:@color-swatch1;
+        display: table;
+        padding: 20px;
     }
 	.spare {
 		width: 30%;
@@ -215,20 +207,24 @@ hr.line {
 }
 
 .feature-btn {
-    display:block;
+    display: block;
+    .btn span {
+        background-color: @color-swatch2;
+        padding: 20px;
+        display: table;
+        &:hover {
+           background:lighten(@color-swatch2,20%);
+        }
+    }
 }
 
 .widget.feature .feature-bgimg .content button {
     margin:0;
-    padding:15px 30px;
+    padding: 0;
 }
 
 .widget.feature button {
-    background:@color-swatch2;
-    height:60px;
-    &:hover {
-       background:lighten(@color-swatch2,20%);
-    }
+    background: @color-swatch2;
 }
 
 /* ===============================
@@ -1842,6 +1838,7 @@ blockquote:before {
     }
     .widget.feature .feature-bgimg .content button.btn {
         margin:0px auto;
+        padding: 0;
         display:table;
     }
 
