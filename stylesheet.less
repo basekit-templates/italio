@@ -220,6 +220,15 @@ hr.line {
 
 .widget.feature .feature-bgimg .content button {
     margin:0;
+    padding:15px 30px;
+}
+
+.widget.feature button {
+    background:@color-swatch2;
+    height:60px;
+    &:hover {
+       background:lighten(@color-swatch2,20%);
+    }
 }
 
 /* ===============================
@@ -228,7 +237,6 @@ hr.line {
 
 .bk-pt-default .menu-container {
     background-color: fadeout(@color-swatch4, 95%);
-    
 }
 
 .widget.menusections {
@@ -388,9 +396,10 @@ hr.line {
     .extendednavigation {
         float: none;
         position: relative;
-        max-width: 100%;
         min-height: 50px;
         padding:10px 0px;
+        display:inline-block;
+        float:right;
         @media @tablet {
             background-color: transparent;
         }
@@ -618,7 +627,7 @@ hr.line {
    HEADER
    =============================== */
 
-header {
+header.bk-header {
     padding: 20px 0;
     background-color: @color-swatch2;
 }
@@ -712,6 +721,7 @@ header {
                     margin-bottom:20px;
                     margin:0px auto;
                     display:table;
+                    margin:10px 0px 0px 0px;
                 }
             }
 
@@ -733,6 +743,7 @@ header {
                     margin-bottom:20px;
                     margin:0px auto;
                     display:table;
+                    margin:5px 0px 0px 0px;
                 }
             }
 
@@ -959,6 +970,7 @@ header {
                                     background-position: center;
                                     font-family:@font-swatch5-font-family;
                                     font-size:@font-swatch5-font-size;
+                                    font-weight:400;
                                     z-index: 9999999;
                                     color: @color-swatch1;
                                     margin-right: 5px;
@@ -1543,7 +1555,7 @@ footer.bk-footer {
 
 button.btn {
     background-color:@color-swatch3;
-    padding:10px;
+    padding:15px;
     color: @font-swatch7-color;
 }
 
@@ -1582,14 +1594,6 @@ button.btn:hover {
     }
     @media @mobile {
         width: 100%;
-    }
-}
-
-.widget.feature button {
-    background:@color-swatch2;
-    height:45px;
-    &:hover {
-       background:lighten(@color-swatch2,20%);
     }
 }
 
@@ -1655,7 +1659,7 @@ button.btn:hover {
 
 .widget.paypalbuynow .widget.button.paypal {
     background-color:@color-swatch3;
-    padding:20px 10px 15px 40px;
+    padding:20px 10px 20px 40px;
 }
 
 .widget.paypalbuynow .widget.button.paypal:hover {
@@ -1690,7 +1694,7 @@ button.btn:hover {
 
 .widget.dropbox button {
     background-color:@color-swatch3;
-    padding:20px 10px 15px 40px;
+    padding:20px 10px 20px 40px;
 }
 
 .widget.dropbox button:hover {
@@ -1781,7 +1785,7 @@ blockquote:before {
 
     .widget.menusections ul li {
         border-bottom:0;
-        padding:0;
+        padding:5px 0;
     }
 
     .widget.menusections {
@@ -1793,10 +1797,6 @@ blockquote:before {
 
     .tabletmob-nav {
         min-height:50px;
-    }
-
-    .bk-pt-default-menu header.bk-header .companyheader {
-        padding:130px 0px;
     }
 
     .navbar {
@@ -1870,7 +1870,7 @@ blockquote:before {
         margin-top: 20px;
     }
 
-    header {
+    header.bk-header {
         padding:40px 0 20px 0;
     }
 
@@ -1882,6 +1882,18 @@ blockquote:before {
     .widget.extendednavigation .bk-overlay {
         width:100%;
     }
+    .widget.menusections ul li a:before, .widget.menusections ul li a:after {
+        display:none;
+    }
+    .widget .extendednavigation {
+        display:block;
+        float:none;
+    }
+    .widget.logo {
+        float:none;
+        margin-right:0;
+    }
+
 }
 
 /* ===============================
@@ -1908,10 +1920,6 @@ blockquote:before {
           font-size: bkscale(@font-swatch10-font-size,0.9);
           line-height:bkscale(@font-swatch10-line-height,0.9);
           padding-bottom:0px;  
-    }
-
-    header.bk-header .companyheader {
-        padding: 120px 0px 100px 0px;
     }
 
     .bk-content-text p {
@@ -1958,10 +1966,6 @@ blockquote:before {
 
     .bk-content-text h2:before, .bk-content-text h2:after {
       display:none;
-    }
-
-    header.bk-header .companyheader{
-        margin:0px
     }
 
     .widget.contactform form {
