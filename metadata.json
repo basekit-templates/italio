@@ -1,7 +1,8 @@
 {
     "name":"Italio",
     "thumbnail":"italio.png",
-    "screenshot":"italio.png", 
+    "screenshot":"italio.png",
+    "templateType":"menu",
     "pageTypes": [
         "home"
     ],
