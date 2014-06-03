@@ -206,18 +206,6 @@ hr.line {
 	}
 }
 
-.feature-btn {
-    display: block;
-    .btn span {
-        background-color: @color-swatch2;
-        padding: 20px;
-        display: table;
-        &:hover {
-           background:lighten(@color-swatch2,20%);
-        }
-    }
-}
-
 .widget.feature .feature-bgimg .content button {
     margin:0;
     padding: 0;
@@ -1213,6 +1201,11 @@ footer.bk-footer {
     background-image: image('/images/social/socialicons-youtube.svg')
 }
 
+.svg .widget.clicktocall a {
+	background-image:image('/images/icon-phone.svg');
+}
+
+
 /* PNG ICONS */
 
 .widget.socialicons span.bk-socialicons-twitter a,
@@ -1245,8 +1238,13 @@ footer.bk-footer {
     background-image: image('/images/social/socialicons-youtube.png')
 }
 
+.widget.clicktocall a {
+	background-image:image('/images/icon-phone.png');
+}
+
+
 /* ===============================
-  BLOG
+   BLOG
    =============================== */
 
 .widget {
@@ -1292,21 +1290,6 @@ footer.bk-footer {
 .blog-post-more-link {
     float: left;
     width: 100%;
-}
-
-/* BLOG SEARCH */
-.blogsearch {
-    form {
-        button {
-            padding: 10px;
-            color: @font-swatch7-color;
-            font-size: @font-swatch6-font-size;
-            font-weight: @font-swatch6-font-weight;
-            line-height: @font-swatch6-line-height;
-            background-color: @font-swatch7-background-color;
-            border: none;
-        }
-    }
 }
 
 .blog-post-feature-image-wrap {  /* Blog post feature image */
@@ -1419,299 +1402,204 @@ footer.bk-footer {
     top:-10px;
 }
 
-/* ===============================
-   BUTTON WIDGET
-   =============================== */
-.widget.button button {
-    background:@color-swatch3;
-    &:hover {
-        background: darken(@color-swatch3, 5%);
-    }
+// Forms
+fieldset .btn,
+fieldset button,
+form button {
+	vertical-align: middle;
 }
 
-/* ===============================
-   CONTACT FORM WIDGET
-   =============================== */
-
-
-.widget.contactform form {
-    display: block;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
-    text-align:center;
-    margin-bottom:20px;
+.form-group {
+	padding-bottom: 10px;
 }
 
-.widget.contactform fieldset {
-    border: none;
-    padding: 0;
+.widget.ecomproduct .ecom-product .ecom-product-info .ecom-product-variation select,
+.widget.ecomcheckout .delivery select,
+select,
+input,
+input[type=email],
+input[type=text],
+input[type=search],
+textarea,
+.contactform input,
+.contactform textarea,
+.widget.profile form fieldset input {
+	height: 41px;
+	width: 100%;
+	margin-bottom: 5px;
+	text-indent: 0;
+	padding: 8px 9px 10px;
+	background-color: @color-swatch1;
+	border: 1px solid darken(@color-swatch1, 10%);
+	outline: none;
+	-webkit-transition: border .2s;
+	-moz-transition: border .2s;
+	-ms-transition: border .2s;
+	transition: border .2s;
+	&:hover, &:focus {
+		border: 1px solid darken(@color-swatch1, 20%);
+	}
 }
 
-.widget.contactform fieldset label {
-    width: 100%;
-    float: left;
-    font-family:@font-swatch4-font-family;
-    font-size:font-swatch4-font-size;
-    font-weight:@font-swatch4-font-weight;
-    line-height:@font-swatch4-line-height;
-    color:@color-swatch3;
-    letter-spacing: @font-swatch4-letter-spacing;
-    display:none;
+select::-ms-expand {
+	display: none;
 }
 
-.widget.contactform form fieldset input {
-    width: 100%;
-    padding:5px 0px;
-    font-family: @font-swatch5-font-family;
-    font-size: @font-swatch5-font-size;
-    color: @font-swatch5-color;
-    text-indent: 12px;
-    margin-bottom: 20px;
-    background-color:darken(@color-swatch1,10%);
-    border:0;
+.widget.ecomproduct .ecom-product .ecom-product-info .ecom-product-variation select,
+select {
+	-moz-appearance: none;
+	text-indent: 0.01px;
+	text-overflow: '';
 }
 
-.widget.contactform form fieldset textarea {
-    width: 100%;
-    font-family: @font-swatch5-font-family;
-    font-size: @font-swatch5-font-size;
-    color: @font-swatch5-color;
-    text-indent: 8px;
-    padding-top: 14px;
-    margin-top: 6px;
-    margin-bottom: 20px;
-    resize: none;
-    padding: 10px 0px 100px 0px;
-    background-color:darken(@color-swatch1,10%);
-    border:0;
-}
-
-.widget.contactform fieldset input:focus, .widget.contactform fieldset textarea:focus {
-  outline: none;
-}
-
-/* PLACEHOLDER CSS */
-
-::-webkit-input-placeholder { /* WebKit browsers */
-    color:    @color-swatch5;
-}
-:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-    color:   @color-swatch5;
-}
-::-moz-placeholder { /* Mozilla Firefox 19+ */
-    color:    @color-swatch5;
-}
-:-ms-input-placeholder { /* Internet Explorer 10+ */
-    color:    @color-swatch5;
-}
-
-.widget.contactform form fieldset button.btn {
-  padding: 15px 30px;
-  border:1px solid @color-swatch3;
-  font-family: @font-swatch7-font-family;
-  font-size: @font-swatch7-font-size;
-  font-weight:@font-swatch7-font-weight;
-  color: @font-swatch7-color;
-  text-decoration: none;
-  background-color: @color-swatch3;
-}
-  
-.widget.contactform form fieldset button.btn:hover {
-  cursor: pointer;
-  background-color: darken(@color-swatch3,5%);
-  -webkit-transition: background-color 0.15s ease-in-out;
-  -moz-transition: background-color 0.15s ease-in-out;
-  -o-transition: background-color 0.15s ease-in-out;
-  transition: background-color 0.15s ease-in-out;
-}
-
-.widget.contactform fieldset button.btn.justifyleft
-{
-    text-align: left;
-}
-
-.widget.contactform fieldset button.btn.justifycenter
-{
-    text-align: center;
-}
-
-.widget.contactform fieldset button.btn.justifyright
-{
-    text-align: right;
-}
-
-.widget.contactform fieldset button.btn.justifyfull
-{
-    text-align: justify;
-}
-
-.widget.contactform fieldset button.btn.italic {
-    font-style: italic;
-}
-
-.widget.contactform fieldset button.btn.bold {
-    font-weight: bold;
-}
-
-button.btn {
-    background-color:@color-swatch3;
-    padding:15px;
-    color: @font-swatch7-color;
-}
-
-button.btn:hover {
-  cursor: pointer;
-  background-color: darken(@color-swatch3,5%);
-  -webkit-transition: background-color 0.15s ease-in-out;
-  -moz-transition: background-color 0.15s ease-in-out;
-  -o-transition: background-color 0.15s ease-in-out;
-  transition: background-color 0.15s ease-in-out;
-}
-
-/* ===============================
-   SIGN UP FORM
-   =============================== */
-
-.signupform fieldset button {
-    padding:9px 11px 12px;
-}
-
-.signupform fieldset button:hover {
-  cursor: pointer;
-  background-color: darken(@color-swatch3,5%);
-  -webkit-transition: background-color 0.15s ease-in-out;
-  -moz-transition: background-color 0.15s ease-in-out;
-  -o-transition: background-color 0.15s ease-in-out;
-  transition: background-color 0.15s ease-in-out;
+.signupform fieldset label {
+	text-indent: -300px;
+	height: 0;
+	overflow: hidden;
 }
 
 .signupform fieldset input {
-    width:70%;
-    border:0;
-    background-color:darken(@color-swatch1,5%);
-    @media @tablet {
-        width: 90%;
-    }
-    @media @mobile {
-        width: 100%;
-    }
+	vertical-align: middle;
+	width: 100%;
+	&:hover, &:focus {
+		border: 1px solid darken(@color-swatch1, 20%);
+		border-right: none;
+	}
+}
+
+textarea {
+	resize: vertical;
+}
+
+
+.widget.ecomproduct .ecom-product .ecom-product-info .ecom-product-variation select,
+.widget.ecomcheckout .delivery select,
+select {
+	font-family:@font-swatch7-font-family;
+	font-weight: @font-swatch7-font-weight;
+	font-size: @font-swatch7-font-size;
+	line-height:@font-swatch7-line-height;
+	cursor: pointer;
+	-webkit-appearance: none;
+	-webkit-border-radius: 0;
+	position: relative;
+	background-image: image('/images/arrow-down.png');
+	background-repeat: no-repeat;
+	background-position: right 12px center;
+	background-position-x: 95%;
+	background-position-y: 53%;
+	margin-bottom: 12px;
+	padding-right: 33px;
+}
+
+.svg {
+	.widget.ecomproduct .ecom-product .ecom-product-info .ecom-product-variation select, select {
+		background-image: image('/images/arrow-down.svg');
+	}
+}
+
+input[type="search"]::-webkit-search-decoration {
+	display: none;
 }
 
 /* ===============================
-   FORM
+   BUTTONS
    =============================== */
 
-.widget.profile form button {
-    background-color:@color-swatch3;
-    padding:12px;
+.contactform button.btn,
+button.btn,
+.btn,
+.widget.profile form button,
+.widget.paypalbuynow .widget.button.paypal,
+.widget.tweet a,
+.widget.dropbox button,
+.clicktocall a,
+.widget.clicktocall a,
+.signupform fieldset button,
+.blog-search-form button,
+.widget.socialicons span a,
+.widget.profile .bk-profile-socialicons span a,
+.widget.feature .feature-bgimg .content button,
+.template-footer .widget.profile .bk-profile-socialicons span a,
+.blog-search-form button,
+.widget.ecombasket .ecombasket-list-container .ecombasket-checkout-wrap .ecombasket-checkout-link,
+.widget.ecomcheckout table tr td .checkout-quantitybtn button,
+.widget.ecomcheckout .checkout-order-button,
+.widget.ecombasket .ecombasket-pull {
+	display: inline-block;
+	cursor: pointer;
+	background-color: @font-swatch7-background-color;
+	-webkit-appearance: none;
+	font-family:@font-swatch7-font-family;
+	font-weight: @font-swatch7-font-weight;
+	-webkit-font-smoothing: antialiased;
+	color:@font-swatch7-color;
+	line-height:@font-swatch7-line-height;
+	letter-spacing: @font-swatch7-letter-spacing;
+	font-size: @font-swatch7-font-size;
+	padding: 10px 14px 11px;
+	-webkit-transition: .2s;
+	-moz-transition: .2s;
+	-ms-transition: .2s;
+	transition: .2s;
+	border: none;
+	&:hover {
+		background-color: @font-swatch7-background-color-hover;
+		color:@font-swatch7-color;
+		text-decoration: none;
+	}
 }
 
-.widget.profile form button:hover {
-  cursor: pointer;
-  background-color: darken(@color-swatch3,5%);
-  -webkit-transition: background-color 0.15s ease-in-out;
-  -moz-transition: background-color 0.15s ease-in-out;
-  -o-transition: background-color 0.15s ease-in-out;
-  transition: background-color 0.15s ease-in-out;
+.widget.ecombasket .ecombasket-pull {
+	width: auto;
 }
 
-.widget.profile form fieldset input {
-    width:65%;
-    @media @tablet {
-        width: 90%;
-    }
-    @media @mobile {
-        width: 100%;
-    }
+.widget.ecomcheckout table tr td .checkout-quantitybtn button {
+	padding: 0;
 }
 
-/* ===============================
-   BLOG SEARCH
-   =============================== */
-
-.blogsearch form button {
-    font-family: @font-swatch7-font-family;
-    font-size: @font-swatch7-font-size;
-    font-weight:@font-swatch7-font-weight;
-    color: @font-swatch7-color;
-    background-color:@color-swatch3;
-    padding:1px 20px;
+button:disabled,
+button.btn:disabled:hover,
+.widget.ecomcheckout .checkout-order-button:disabled {
+	color: @color-swatch1;
+	cursor: not-allowed;
+	background-color: darken(@color-swatch1, 30%);
+	&:hover {
+		background-color: darken(@color-swatch1, 30%);
+		color: @color-swatch1;
+	}
 }
 
-.blogsearch form button:hover {
-  cursor: pointer;
-  background-color: darken(@color-swatch3,5%);
-  -webkit-transition: background-color 0.15s ease-in-out;
-  -moz-transition: background-color 0.15s ease-in-out;
-  -o-transition: background-color 0.15s ease-in-out;
-  transition: background-color 0.15s ease-in-out;
+.widget.clicktocall a {
+	display: inline-block;
+	background-repeat: no-repeat;
+	background-position: 10px;
+	background-size: 22px;
+	&:hover {
+		padding: 10px 14px 11px 40px;
+	}
 }
 
-.blog-search-input {
-    width:65%;
-    border:0;
-    background-color:darken(@color-swatch1,5%);
+.checkout-empty-link {
+	margin-top: 10px;
+	display: inline-block;
 }
 
-/* ===============================
-   PAYPAL BUTTON
-   =============================== */
-
-.widget.paypalbuynow .widget.button.paypal {
-    background-color:@color-swatch3;
-    padding:20px 10px 20px 40px;
+.widget.tweet a,
+.widget.paypalbuynow .widget.button.paypal,
+.widget.dropbox button,
+.widget.clicktocall a {
+	padding-left: 40px;
+	display: inline-block;
 }
 
-.widget.paypalbuynow .widget.button.paypal:hover {
-  cursor: pointer;
-  background-color: darken(@color-swatch3,5%);
-  -webkit-transition: background-color 0.15s ease-in-out;
-  -moz-transition: background-color 0.15s ease-in-out;
-  -o-transition: background-color 0.15s ease-in-out;
-  transition: background-color 0.15s ease-in-out;
-}
-
-/* ===============================
-   TWITTER BUTTON
-   =============================== */
-
-.widget.tweet a {
-    background-color:@color-swatch3;
-}
-
-.widget.tweet a:hover {
-  cursor: pointer;
-  background-color: darken(@color-swatch3,5%);
-  -webkit-transition: background-color 0.15s ease-in-out;
-  -moz-transition: background-color 0.15s ease-in-out;
-  -o-transition: background-color 0.15s ease-in-out;
-  transition: background-color 0.15s ease-in-out;
-}
-
-/* ===============================
-   DROPBOX BUTTON
-   =============================== */
-
-.widget.dropbox button {
-    background-color:@color-swatch3;
-    padding:20px 10px 20px 40px;
-}
-
-.widget.dropbox button:hover {
-  cursor: pointer;
-  background-color: darken(@color-swatch3,5%);
-  -webkit-transition: background-color 0.15s ease-in-out;
-  -moz-transition: background-color 0.15s ease-in-out;
-  -o-transition: background-color 0.15s ease-in-out;
-  transition: background-color 0.15s ease-in-out;
-}
-
-.widget.dropbox button:hover {
-    background-image:image('/images/dropbox-icon.png');
-    background-repeat:no-repeat;
-    background-position: 10px;
-    background-size: 22px;
+.widget.tweet a,
+.widget.paypalbuynow .widget.button.paypal,
+.widget.dropbox button,
+.ctc-wrap a {
+	padding-left: 40px;
+	padding-right: 16px;
+	display: inline-block;
 }
 
 /* ===============================
@@ -1772,6 +1660,10 @@ blockquote:before {
 
     .menu-container {
         background-color:transparent;
+    }
+    
+    .widget .extendednavigation {
+	    width: auto;
     }
 
     .companyheader .companyname a {
@@ -1906,6 +1798,9 @@ blockquote:before {
 
     .widget.extendednavigation ul.align-right li.folder {
         background-position: 12px center;
+        padding-right: 10px;
+    }
+    .widget .extendednavigation ul li.folder .text:after{
         padding-right: 0;
     }
     .widget .extendednavigation a.menu-pull:after {
