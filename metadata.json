@@ -71,9 +71,9 @@
         },
         "font2": {
             "font-family": "\"Lato\", Geneva, Tahoma, sans-serif",
-            "font-size": "32px",
+            "font-size": "26px",
             "font-weight": "400",
-            "line-height": "38px",
+            "line-height": "32px",
             "color": "@color-swatch2",
             "letter-spacing": "2px"
         },
