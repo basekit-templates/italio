@@ -11,8 +11,8 @@ Table of Contents -
   1. Default
   2. Variable Media Queries
   3. Custom CSS
-  4. Menu sections navigation
-  5. Header
+  4. Header
+  5. Menu sections navigation
   6. Menu
   7. Footer
   8. SOCIAL BAR WIDGET / PROFILE DATA
@@ -222,6 +222,154 @@ hr.line {
 
 .widget.feature .feature-bgimg .content button.btn {
     background-color:@color-swatch2;
+}
+
+/* ===============================
+   HEADER
+   =============================== */
+
+header.bk-header {
+    padding: 20px 0;
+    background-color: @color-swatch2;
+}
+
+.companyheader {
+    display: block;
+    float: left;
+    padding: 0;
+    margin: 6px 0 0;
+}
+
+/* COMPANY NAME */
+
+.widget.companyname {
+    display: block;
+    float: left;
+}
+
+.widget.companyname a {
+    font-family: @font-swatch10-font-family;
+    font-weight: @font-swatch10-font-weight;
+    color: @font-swatch10-color;
+    line-height: @font-swatch10-line-height;
+    letter-spacing: @font-swatch10-letter-spacing;
+    font-size: @font-swatch10-font-size;
+    
+}
+
+.widget.companyname a:hover {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* LOGO */
+
+.widget.logo {
+    display: block;
+    float: left;
+    margin-right: 10px;
+}
+
+.box {
+    width: 45%;
+    background-color: rgba(255, 255, 255, 0.9);
+    margin: 0px auto;
+    padding: 110px 0px;
+}
+
+
+.headerprofile {
+    background-color:@color-swatch1;
+    padding:0;
+    background-repeat: no-repeat;
+    background-position:bottom;
+    background-size:contain;
+    padding: 20px 0px 10px 0px;
+            .header-left {
+                float:left;
+                width:33%;
+                .widget.profile span {
+                    float:left;
+                }
+                    .widget.content { 
+                    @media @tablet {
+                    margin:0px auto;
+                    display:table;
+                    text-align:center;
+                        }
+                    }
+                @media @tablet {
+                    width:100%;
+                    margin-top:20px;
+                }
+            }
+
+            .header-right {
+                float:right;
+                width:33%;
+                .widget.profile span {
+                }
+                .widget.profile {
+                    float:right;
+                    @media @tablet {
+                    margin:0px auto;
+                    display:table;
+                    }
+                }
+                @media @tablet {
+                    width:100%;
+                    margin-top:0;
+                    margin-bottom:20px;
+                    margin:0px auto;
+                    display:table;
+                    margin:10px 0px 0px 0px;
+                }
+            }
+
+            .header-center {
+                float:left;
+                width:33%;
+                .widget.profile span {
+                }
+                .widget.profile {
+                    float:right;
+                    @media @tablet {
+                    margin:0px auto;
+                    display:table;
+                    }
+                }
+                @media @tablet {
+                    width:100%;
+                    margin-top:0;
+                    margin-bottom:20px;
+                    margin:0px auto;
+                    display:table;
+                    margin:5px 0px 0px 0px;
+                }
+            }
+
+        }
+
+.menu-header h2:before, .widget.menu .main .menu-subsection-header h2:before {
+    content: "★";
+    display: inline-block;
+    height: 0.6em;
+    position: relative;
+    vertical-align: middle;
+    margin-bottom: 1.7em;
+    font-size:22px;
+    margin-right:15px;
+}
+
+.widget.menu .main .menu-subsection-header h2:after {
+    content: "★";
+    display: inline-block;
+    height: 0.6em;
+    position: relative;
+    vertical-align: middle;
+    margin-bottom: 1.7em;
+    font-size:22px;
+    margin-left:15px;
 }
 
 /* ===============================
@@ -610,155 +758,6 @@ hr.line {
     border-radius:0;
     box-shadow:none;
     margin-top:20px; 
-}
-
-
-/* ===============================
-   HEADER
-   =============================== */
-
-header.bk-header {
-    padding: 20px 0;
-    background-color: @color-swatch2;
-}
-
-.companyheader {
-    display: block;
-    float: left;
-    padding: 0;
-    margin: 6px 0 0;
-}
-
-/* COMPANY NAME */
-
-.widget.companyname {
-    display: block;
-    float: left;
-}
-
-.widget.companyname a {
-    font-family: @font-swatch10-font-family;
-    font-weight: @font-swatch10-font-weight;
-    color: @font-swatch10-color;
-    line-height: @font-swatch10-line-height;
-    letter-spacing: @font-swatch10-letter-spacing;
-    font-size: @font-swatch10-font-size;
-    
-}
-
-.widget.companyname a:hover {
-    cursor: pointer;
-    text-decoration: none;
-}
-
-/* LOGO */
-
-.widget.logo {
-    display: block;
-    float: left;
-    margin-right: 10px;
-}
-
-.box {
-    width: 45%;
-    background-color: rgba(255, 255, 255, 0.9);
-    margin: 0px auto;
-    padding: 110px 0px;
-}
-
-
-.headerprofile {
-    background-color:@color-swatch1;
-    padding:0;
-    background-repeat: no-repeat;
-    background-position:bottom;
-    background-size:contain;
-    padding: 20px 0px 10px 0px;
-            .header-left {
-                float:left;
-                width:33%;
-                .widget.profile span {
-                    float:left;
-                }
-                    .widget.content { 
-                    @media @tablet {
-                    margin:0px auto;
-                    display:table;
-                    text-align:center;
-                        }
-                    }
-                @media @tablet {
-                    width:100%;
-                    margin-top:20px;
-                }
-            }
-
-            .header-right {
-                float:right;
-                width:33%;
-                .widget.profile span {
-                }
-                .widget.profile {
-                    float:right;
-                    @media @tablet {
-                    margin:0px auto;
-                    display:table;
-                    }
-                }
-                @media @tablet {
-                    width:100%;
-                    margin-top:0;
-                    margin-bottom:20px;
-                    margin:0px auto;
-                    display:table;
-                    margin:10px 0px 0px 0px;
-                }
-            }
-
-            .header-center {
-                float:left;
-                width:33%;
-                .widget.profile span {
-                }
-                .widget.profile {
-                    float:right;
-                    @media @tablet {
-                    margin:0px auto;
-                    display:table;
-                    }
-                }
-                @media @tablet {
-                    width:100%;
-                    margin-top:0;
-                    margin-bottom:20px;
-                    margin:0px auto;
-                    display:table;
-                    margin:5px 0px 0px 0px;
-                }
-            }
-
-        }
-
-.menu-header h2:before, .widget.menu .main .menu-subsection-header h2:before {
-    content: "★";
-    display: inline-block;
-    height: 0.6em;
-    position: relative;
-    vertical-align: middle;
-    margin-bottom: 1.7em;
-    font-size:22px;
-    margin-right:15px;
-}
-
-.widget.menu .main .menu-subsection-header h2:after {
-    content: "★";
-    display: inline-block;
-    height: 0.6em;
-    position: relative;
-    vertical-align: middle;
-    margin-bottom: 1.7em;
-    font-size:22px;
-    margin-left:15px;
 }
 
 /* ===============================
