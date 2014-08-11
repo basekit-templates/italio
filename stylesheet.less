@@ -1571,7 +1571,6 @@ select,
 input,
 input[type=email],
 input[type=text],
-input[type=search],
 textarea,
 .contactform input,
 .contactform textarea,
@@ -1591,6 +1590,14 @@ textarea,
 	&:hover, &:focus {
 		border: 1px solid darken(@color-swatch1, 20%);
 	}
+}
+
+input[type=search] {
+    width:70%;
+} 
+
+.productlist-search label {
+    display:block;
 }
 
 select::-ms-expand {
