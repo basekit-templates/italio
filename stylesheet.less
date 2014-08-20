@@ -1344,6 +1344,37 @@ footer.bk-footer {
            }
        }
 
+.widget.blogpost .blog-post-metadata time {
+    padding: 30px 0;
+    display: inline-block;
+}
+
+/* BLOG POST SHARING */
+
+.blog-post-sharing {
+    margin: 1.8em 0;
+    button {
+        &.btn.facebook {
+            background-color: #3b5998;
+            &:hover {
+                background-color:darken(#3b5998,5%);
+            }
+        }
+        &.btn.twitter {
+            background-color: #4099FF;
+            &:hover {
+                background-color:darken(#4099FF,5%);
+            }
+        }
+        &.btn.googleplus {
+            background-color: #d34836;
+            &:hover {
+                background-color:darken(#d34836,5%);
+            }
+        }
+    }
+}
+
 /* ===============================
    SLIDESHOW WIDGET
    =============================== */
@@ -1443,7 +1474,18 @@ footer.bk-footer {
     top:-10px;
 }
 
-// Forms
+
+/* ===============================
+   GALLERY WIDGET
+   =============================== */
+
+.gallery .image-data {
+    background: darken(@color-swatch1,3%);
+}
+
+/* ===============================
+    FORMS
+   =============================== */
 fieldset .btn,
 fieldset button,
 form button {
@@ -1573,7 +1615,8 @@ button.btn,
 .widget.ecombasket .ecombasket-list-container .ecombasket-checkout-wrap .ecombasket-checkout-link,
 .widget.ecomcheckout table tr td .checkout-quantitybtn button,
 .widget.ecomcheckout .checkout-order-button,
-.widget.ecombasket .ecombasket-pull {
+.widget.ecombasket .ecombasket-pull,
+a.blog-post-pagination-page {
 	display: inline-block;
 	cursor: pointer;
 	background-color: @font-swatch7-background-color;
