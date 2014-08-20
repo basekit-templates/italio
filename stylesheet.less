@@ -549,11 +549,11 @@ header.bk-header {
             display: inline-block;
             &:first-child {
                 @media @tablet {
-                    border-top: 1px solid darken(@color-swatch1,8%);
+                    border-top: 1px solid fade(@color-swatch1,20%);
                 }
             }
             @media @tablet {
-                border-bottom: 1px solid darken(@color-swatch1,8%);
+                border-bottom: 1px solid fade(@color-swatch1,20%);
             }
             &.folder {
                 .text {
@@ -816,23 +816,16 @@ header.bk-header {
 
 .widget.menu {
     margin:0 auto;
-    @media only screen and (max-width: 1084px) {
-         width: 90%;
-    }
+    width: 100%;
     @media @tablet {
         background-image: none;
         width:100%;
     }
-
     .main {
         width: 100%;
         margin: 0 auto;
-            @media only screen and (max-width: 1084px) {
-                width: 93%;
-            }
             @media @tablet {
                 background-color: @color-swatch1;
-                width:90%;
                 padding: 10px 0;
             }
             @media @mobile {
