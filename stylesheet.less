@@ -1471,6 +1471,98 @@ footer.bk-footer {
 
 
 /* ===============================
+   TWITTER WIDGET
+   =============================== */
+@twitterProfilePicSize: 60px;
+
+.widget.twitter {
+    .clearfix;
+    .block-widget;
+
+    ul.twitter {
+        li {
+            position: relative;
+            min-height: @twitterProfilePicSize;
+            padding-bottom: 60px;
+            width: 48%;
+            margin-right: 4%;
+            float: left;
+
+            @media @bp-layout-1200 {
+                width: auto;
+                float: none;
+                margin-right: 0;
+            }
+            &:nth-child(2n+2) {
+                margin-right: 0;
+            }
+
+            @media @mobile {
+                padding-bottom: 15px;
+            }
+            
+            // footer
+            a, time + span, time, span a {
+                font-size: (@font-swatch5-font-size * 0.8);
+                font-family: @font-swatch5-font-family;
+                line-height: 1;
+                font-weight: normal;
+                color: fade(@color-swatch5,40%);
+                text-decoration: none;
+                @media @mobile {
+                    font-size: (@font-swatch5-font-size * 0.6);
+                }
+            }
+            // profile pic
+            .twitter-profile-pic {
+                width: @twitterProfilePicSize;
+                height: @twitterProfilePicSize;
+                display: block;
+                position: absolute;
+                left: 0;
+                top: 0;
+
+                
+                img {
+                    width: 100%;
+                    height: auto;
+                    display: block;
+                }
+            }
+            .twitter-content {
+                line-height: 1.2em;
+                margin-left: (@twitterProfilePicSize + 10 );
+                
+                
+                .bk-full-name {
+                    color: @font-swatch5-color;
+                    font-size: (@font-swatch5-font-size * 0.86);
+                    font-family: @font-swatch4-font-family;
+                   
+                    display: inline-block;
+                    
+                    margin-bottom: 0;
+                    @media @mobile {
+                        font-size: (@font-swatch5-font-size * 0.8);
+                    }
+                }
+                a + p {
+                    font-family: @font-swatch5-font-family;
+                    margin-bottom: 0.7em;
+                    a {
+                        font-family: @font-swatch5-font-family;
+                        font-size: @font-swatch5-font-size;
+                        color: @color-swatch6;
+                        line-height: @font-swatch5-line-height;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* ===============================
    GALLERY WIDGET
    =============================== */
 
