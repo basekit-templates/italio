@@ -1487,13 +1487,19 @@ form button {
 	vertical-align: middle;
 }
 
+input {
+    vertical-align: middle;
+}
+
 .form-group {
 	padding-bottom: 10px;
 }
 
 .contactform input,
 .contactform textarea,
-.widget.profile form fieldset input {
+.widget.profile form fieldset input,
+.signupform fieldset input.email,
+input.blog-search-input {
 	height: 41px;
 	width: 100%;
 	margin-bottom: 5px;
@@ -1557,6 +1563,7 @@ button.btn,
 .widget.ecombasket .ecombasket-pull,
 a.blog-post-pagination-page {
 	display: inline-block;
+    vertical-align: middle;
 	cursor: pointer;
 	background-color: @font-swatch7-background-color;
 	-webkit-appearance: none;
@@ -1567,7 +1574,7 @@ a.blog-post-pagination-page {
 	line-height:@font-swatch7-line-height;
 	letter-spacing: @font-swatch7-letter-spacing;
 	font-size: @font-swatch7-font-size;
-	padding: 10px 14px 11px;
+	padding: 10px 14px;
 	-webkit-transition: .2s;
 	-moz-transition: .2s;
 	-ms-transition: .2s;
